@@ -1,0 +1,32 @@
+
+
+<div class="row" *ngIf="cs.usuario.uid">
+  <div class="col-md-12 text-center">
+      <button class="btn btn-outline-danger"
+      type="button" (click)="cs.logout()">
+            Salir
+      </button>
+
+
+
+  </div>
+</div>
+
+  
+<div class="row" *ngIf="!cs.usuario.uid">
+  <div class="col-md-12 text-center">
+      <p>Inicia sesión para ingresar al chat</p>
+      <button class="btn btn-outline-primary"
+      type="button" (click)="ingresar('google')">
+            Google
+      </button>
+
+
+      <button class="btn btn-outline-info"
+      type="button" (click)="ingresar('twitter')">
+      Twitter
+      </button>
+
+
+  </div>
+</div>
